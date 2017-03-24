@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LJKeyboardEmoticonViewController.h"
+#import "LJKeyboardAttachment.h"
 
 @interface ViewController ()
 
@@ -46,7 +47,8 @@
                 // 创建原有文字属性字符串
                 NSMutableAttributedString *attrMStr = [[NSMutableAttributedString alloc] initWithAttributedString:weakSelf.customTextView.attributedText];
                 // 创建图片属性字符串
-                NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
+                LJKeyboardAttachment *attachment = [[LJKeyboardAttachment alloc] init];
+                attachment.emoticonChs = emoticon.chs;
                 attachment.bounds = CGRectMake(0, -4, weakSelf.customTextView.font.lineHeight, weakSelf.customTextView.font.lineHeight);
                 attachment.image = [UIImage imageWithContentsOfFile:emoticon.pngPath];
                 NSAttributedString *imageAttrStr = [NSAttributedString attributedStringWithAttachment:attachment];
@@ -68,10 +70,24 @@
             
         }];
     }
-    
-    
-    
     return _keyboardEmoticonVC;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSRange range = NSMakeRange(0, self.customTextView.attributedText.length);
+    NSMutableString *mutableStr = [[NSMutableString alloc] init];
+    
+    [self.customTextView.attributedText enumerateAttributesInRange:range options:NSAttributedStringEnumerationReverse usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+        LJKeyboardAttachment *tempAttachment = attrs[@"NSAttachment"];
+        if (tempAttachment) {
+            [mutableStr appendString:tempAttachment.emoticonChs];
+        } else {
+            [mutableStr appendString:[self.customTextView.text substringWithRange:range]];
+        }
+    }];
+    
+    NSLog(@"%@",mutableStr);
+    
 }
 
 @end
