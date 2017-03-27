@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D623B821E853B9700769B7A /* LJKeyboardAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D623B811E853B9700769B7A /* LJKeyboardAttachment.m */; };
+		1D8E12F91E88F1F10005825D /* LJKeyboardTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E12F81E88F1F10005825D /* LJKeyboardTextView.m */; };
 		1D95C6771E6EC8A900FE8FD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D95C6761E6EC8A900FE8FD4 /* main.m */; };
 		1D95C67A1E6EC8A900FE8FD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D95C6791E6EC8A900FE8FD4 /* AppDelegate.m */; };
 		1D95C67D1E6EC8A900FE8FD4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D95C67C1E6EC8A900FE8FD4 /* ViewController.m */; };
@@ -24,6 +25,8 @@
 /* Begin PBXFileReference section */
 		1D623B801E853B9700769B7A /* LJKeyboardAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKeyboardAttachment.h; sourceTree = "<group>"; };
 		1D623B811E853B9700769B7A /* LJKeyboardAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKeyboardAttachment.m; sourceTree = "<group>"; };
+		1D8E12F71E88F1F10005825D /* LJKeyboardTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKeyboardTextView.h; sourceTree = "<group>"; };
+		1D8E12F81E88F1F10005825D /* LJKeyboardTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKeyboardTextView.m; sourceTree = "<group>"; };
 		1D95C6721E6EC8A900FE8FD4 /* 表情键盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "表情键盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D95C6761E6EC8A900FE8FD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D95C6781E6EC8A900FE8FD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 				1DA7C0A01E717B0100E0C95F /* LJKeyboardpackage.m */,
 				1D623B801E853B9700769B7A /* LJKeyboardAttachment.h */,
 				1D623B811E853B9700769B7A /* LJKeyboardAttachment.m */,
+				1D8E12F71E88F1F10005825D /* LJKeyboardTextView.h */,
+				1D8E12F81E88F1F10005825D /* LJKeyboardTextView.m */,
 			);
 			path = KeyboardEmoticon;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				1DA7C0A21E717B0100E0C95F /* LJKeyboardEmoticonViewController.m in Sources */,
 				1DA7C0A41E717B0100E0C95F /* LJKeyboardpackage.m in Sources */,
 				1D95C67D1E6EC8A900FE8FD4 /* ViewController.m in Sources */,
+				1D8E12F91E88F1F10005825D /* LJKeyboardTextView.m in Sources */,
 				1DA7C0A11E717B0100E0C95F /* LJKeyboardEmoticonCollectionViewCell.m in Sources */,
 				1D95C67A1E6EC8A900FE8FD4 /* AppDelegate.m in Sources */,
 				1D95C6771E6EC8A900FE8FD4 /* main.m in Sources */,
